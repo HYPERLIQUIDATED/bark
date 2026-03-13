@@ -25,7 +25,7 @@ impl Serialize for Flag {
         S: serde::Serializer,
     {
         if self.0 {
-            serializer.serialize_u8(1)
+            serializer.serialize_str("1")
         } else {
             serializer.serialize_none()
         }
